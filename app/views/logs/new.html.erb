@@ -1,0 +1,6 @@
+<h1>New Log</h1>
+
+<% semantic_form_for @log do |f| %>
+  <%= render(:partial => "form", :local => { :f => f }) %>
+  <p><%= f.submit "Create Log" %></p>
+<% end %>
