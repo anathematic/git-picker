@@ -1,0 +1,18 @@
+/* Global Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+table { border-spacing: 0; }
+acronym { cursor: help; }
+
+body { margin: 0px; background: url('/images/bg.png') no-repeat top center #0B1E39; font-family: 'Helvetica Neue', 'Arial'; font-size: 90%; }
+h1, h2, h3, h4, h5 { color: #0B1E39; font-family: "Palatino","Georgia","Baskerville", serif; font-weight: normal; }
+h1 { font-size: 170%; }
+h2 { font-size: 160%; }
+h3 { font-size: 150%; }
+h4 { font-size: 140%; }
+h5 { font-size: 130%; }
+a { color: #9DB23D; }
+hr { border: none; border-top: 1px solid #ddd; }
