@@ -8,5 +8,6 @@ Feature: Log Import
     When I attach the file at "spec/fixtures/git-example.tar.gz" to "Attachment"
     And I press "Upload"
     Then I should see "Successfully Uploaded File"
-    When I click "Download CSV"
-    Then I should see "3 Commits"
+    When I follow "Download CSV"
+    Then I should see "Thomas"
+    And I should see "Added foo text file"

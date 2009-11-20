@@ -12,7 +12,7 @@ class LogsController < ApplicationController
     @log = Log.new(params[:log])
     
     if @log.save
-      redirect_to log_path
+      redirect_to log_path(@log)
       flash[:notice] = "Successfully Uploaded File"
     else
       render(:action => "new")
@@ -21,6 +21,11 @@ class LogsController < ApplicationController
   
   def show
     @log = Log.find(params[:id])
+    
+    respond_to do |format|
+      format.html { }
+      format.csv { }
+    end
   end
   
 end

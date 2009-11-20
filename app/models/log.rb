@@ -9,7 +9,7 @@ class Log < ActiveRecord::Base
 
   validates_attachment_presence :attachment
   
-  #after_save :unzip
+  after_save :read_git
   
   def hashed_id
     Digest::SHA1.hexdigest(self.id)
