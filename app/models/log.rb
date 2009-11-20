@@ -7,7 +7,7 @@ class Log < ActiveRecord::Base
                     :path => ":rails_root/public/gits/:basename.:extension",
                     :url => "/gits/:basename.:extension"
 
-  validates_attachment_presence :attachment
+  validates_attachment_presence :attachment, :message => "^You must add a file to upload"
   
   after_save :read_git
   

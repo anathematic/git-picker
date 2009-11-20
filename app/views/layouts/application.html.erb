@@ -6,14 +6,21 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title><%= APP_CONFIG[:name] %></title>
-	<%= stylesheet_link_tag "application.css" %>
+	<%= stylesheet_link_tag "formtastic.css", "application.css" %>
 </head>
 
 <body>
 
-<div><%= flash[:notice] %></div>
+<div align="center">  
+  <div class="wrapper">
+    <h1><%= link_to "Git Picker", root_path %></h1>
+    <p><i>Grab git logs easily</i></p>
 
-<%= yield %>
+    <div><%= flash[:notice] %></div>
+
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>
