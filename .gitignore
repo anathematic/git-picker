@@ -1,0 +1,11 @@
+log/*
+tmp/*
+config/database.yml
+.DS_Store
+db/development.sqlite3
+db/test.sqlite3
+db/sphinx/*
+config/development.sphinx.conf
+config/test.sphinx.conf
+webrat*.html
+public/gits/*
