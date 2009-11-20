@@ -1,7 +1,7 @@
 class Log < ActiveRecord::Base
 
   include Grit
-  has_many :commits
+  has_many :commits, :class_name => "::Commit"
   
   has_attached_file :attachment, 
                     :path => ":rails_root/public/gits/:basename.:extension",
@@ -24,8 +24,9 @@ class Log < ActiveRecord::Base
     unzip
     repo = Repo.new("#{RAILS_ROOT}/tmp/#{id}/")
     
-    # repo.commits.each do |commit|
-      
+    repo.commits.each do |commit|
+      commits.create!(:message => commit.message, :authored_by => commit.author.to_s, :commited_at => commit.date)
+    end  
   end
   
 end

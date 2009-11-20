@@ -2,6 +2,9 @@ class CreateCommits < ActiveRecord::Migration
   def self.up
     create_table :commits do |t|
       t.integer :log_id
+      t.string :authored_by
+      t.datetime :commited_at
+      t.string :message
       t.timestamps
     end
   end

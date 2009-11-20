@@ -24,6 +24,7 @@ describe Log do
   it "should be able to open a .git and create the logs" do
     @log.save
     @log.read_git
+    @log.commits.size.should eql(3)
   end
   
 end

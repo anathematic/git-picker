@@ -13,6 +13,9 @@ ActiveRecord::Schema.define(:version => 20091119212159) do
 
   create_table "commits", :force => true do |t|
     t.integer  "log_id"
+    t.string   "authored_by"
+    t.datetime "commited_at"
+    t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
