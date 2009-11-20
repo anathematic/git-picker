@@ -1,0 +1,15 @@
+development:
+  domain: localhost:3000
+  name: Git Picker
+  
+test:
+  domain: test.host
+  name: Git Picker
+
+cucumber:
+  domain: test.host
+  name: Git Picker
+  
+production:
+  domain: example.com
+  name: Git Picker
