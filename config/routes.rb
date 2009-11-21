@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :logs
+  map.resoruces :gits
+
   map.root :controller => "logs"
 
   map.connect ':controller/:action/:id'
