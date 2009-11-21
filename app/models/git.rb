@@ -20,20 +20,19 @@ class Git < ActiveRecord::Base
     `tar -xf #{RAILS_ROOT}/public/gits/#{attachment_file_name} -C #{RAILS_ROOT}/tmp/#{id}`
   end
   
-  def read_git
+  def git_repo
     unzip
-    repo = Repo.new("#{RAILS_ROOT}/tmp/#{id}/")
+    @git_repo ||= Repo.new("#{RAILS_ROOT}/tmp/#{id}/")
   end
   
   def read_branches
-    read_git
-    repo.branches.each do |branch|
+    git_repo.branches.each do |branch|
       branches.create!(:name => branch.name)
     end
   end
   
   def load_commits
-    repo.commits('master', 9999).each do |commit|
+    git_repo.commits('master', 9999).each do |commit|
       commits.create!(:message => commit.message, :authored_by => commit.author.to_s, :commited_at => commit.date)
     end  
   end

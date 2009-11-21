@@ -12,7 +12,7 @@
 ActiveRecord::Schema.define(:version => 20091121011730) do
 
   create_table "commits", :force => true do |t|
-    t.integer  "log_id"
+    t.integer  "git_id"
     t.string   "authored_by"
     t.datetime "commited_at"
     t.string   "message"
@@ -21,16 +21,6 @@ ActiveRecord::Schema.define(:version => 20091121011730) do
   end
 
   create_table "gits", :force => true do |t|
-    t.string   "name"
-    t.string   "attachment_file_name"
-    t.string   "attachment_content_type"
-    t.integer  "attachment_file_size"
-    t.datetime "attachment_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "logs", :force => true do |t|
     t.string   "name"
     t.string   "attachment_file_name"
     t.string   "attachment_content_type"

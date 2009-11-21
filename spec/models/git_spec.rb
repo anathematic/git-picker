@@ -6,7 +6,7 @@ describe Git do
       :name => "Git for random project",
       :attachment => File.open("#{RAILS_ROOT}/spec/fixtures/git-example.tar.gz")
     }
-    @git = Log.new(@valid_attributes)
+    @git = Git.new(@valid_attributes)
   end
 
   it "should create a new instance given valid attributes" do
