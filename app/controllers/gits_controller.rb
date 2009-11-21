@@ -1,7 +1,7 @@
 class GitsController < ApplicationController
 
   def index
-    redirect_to new_Git_path
+    redirect_to new_git_path
   end
   
   def new
@@ -9,10 +9,10 @@ class GitsController < ApplicationController
   end
   
   def create
-    @git = Git.new(params[:Git])
+    @git = Git.new(params[:git])
     
     if @git.save
-      redirect_to Git_path(@git)
+      redirect_to git_path(@git)
       flash[:notice] = "Successfully Uploaded File"
     else
       render(:action => "new")

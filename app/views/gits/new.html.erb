@@ -1,4 +1,4 @@
-<% semantic_form_for @log, :html => { :multipart => true, :method => :post } do |f| %>
+<% semantic_form_for @git, :html => { :multipart => true, :method => :post } do |f| %>
     <%= render(:partial => "form", :locals => { :f => f }) %>
     <p><%= f.submit "Upload" %></p>
 <% end %>

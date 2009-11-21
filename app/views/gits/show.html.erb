@@ -1,0 +1,6 @@
+<div class="white">
+  <p><%= flash[:notice] %></p>
+  Logged <%= @git.commits.count %> commits
+</div>
+<br style="clear: both;" />
+<p><%= link_to "Download CSV", git_path(:format => "csv"), :class => "button" %> or <%= link_to "New Git", new_git_path, :class => "button" %></p>
