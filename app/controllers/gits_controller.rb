@@ -1,18 +1,18 @@
 class GitsController < ApplicationController
 
   def index
-    redirect_to new_log_path
+    redirect_to new_Git_path
   end
   
   def new
-    @log = Log.new
+    @git = Git.new
   end
   
   def create
-    @log = Log.new(params[:log])
+    @git = Git.new(params[:Git])
     
-    if @log.save
-      redirect_to log_path(@log)
+    if @git.save
+      redirect_to Git_path(@git)
       flash[:notice] = "Successfully Uploaded File"
     else
       render(:action => "new")
@@ -20,7 +20,7 @@ class GitsController < ApplicationController
   end
   
   def show
-    @log = Log.find(params[:id])
+    @git = Git.find(params[:id])
     
     respond_to do |format|
       format.html { }

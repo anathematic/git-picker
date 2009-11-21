@@ -1,8 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resoruces :gits
+  map.resources :gits
 
-  map.root :controller => "logs"
+  map.root :controller => "gits"
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
