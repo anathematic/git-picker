@@ -1,6 +1,7 @@
 class Commit < ActiveRecord::Base
 
   belongs_to :log
+  belongs_to :git
   
   validates_presence_of :authored_by
   validates_presence_of :commited_at
