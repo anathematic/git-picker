@@ -7,9 +7,9 @@ class Log < ActiveRecord::Base
                     :path => ":rails_root/public/gits/:basename.:extension",
                     :url => "/gits/:basename.:extension"
 
-  validates_attachment_presence :attachment, :message => "^You must add a file to upload"
+  validates_attachment_presence :attachment, :message => "You must add a file to upload"
   
-  after_save :read_git
+  after_save :load_commits
   
   def hashed_id
     Digest::SHA1.hexdigest(self.id)
@@ -23,10 +23,21 @@ class Log < ActiveRecord::Base
   def read_git
     unzip
     repo = Repo.new("#{RAILS_ROOT}/tmp/#{id}/")
-    
-    repo.commits.each do |commit|
+  end
+  
+  def read_branches
+    read_git
+    repo.branches.each do |branch|
+      branches.create!(:name => branch.name)
+    end
+  end
+  
+  def load_commits
+    repo.commits('master', 9999).each do |commit|
       commits.create!(:message => commit.message, :authored_by => commit.author.to_s, :commited_at => commit.date)
     end  
   end
+  
+  
   
 end

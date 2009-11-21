@@ -7,9 +7,9 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 table { border-spacing: 0; }
 acronym { cursor: help; }
 
-body { margin: 0px; background: url('/images/bg.png') no-repeat top center #0B1E39; font-family: 'Helvetica Neue', 'Arial'; font-size: 90%; }
+body { margin: 0px; background: url('/images/bg.png') no-repeat left left #0B1E39; font-family: 'Helvetica Neue', 'Arial'; font-size: 100%; }
 h1, h2, h3, h4, h5 { color: #0B1E39; font-family: "Palatino","Georgia","Baskerville", serif; font-weight: normal; }
-h1 { font-size: 270%; font-weight: bold; text-shadow: #004172 0px 1px 1px; }
+h1 { font-size: 270%; text-shadow: #004172 0px 1px 1px; }
 h1 a, h1 a:visited { text-decoration: none; color: #0B1E39; }
 h1 a:hover { text-decoration: underline; }
 h2 { font-size: 160%; }
@@ -20,11 +20,11 @@ a { color: #9DB23D; }
 hr { border: none; border-top: 1px solid #ddd; }
 
 div div.wrapper { width: 400px; text-align: left; position: relative; top: 200px; }
-div div.wrapper div p { font-size: 130%; }
-div div.wrapper div.white { background: #fff; }
+div div.wrapper div p { }
+div div.wrapper div.white { background: #fff; margin-top: 10px; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 3px; }
 
 p a.button, p a.button:visited { font-weight: bold; text-shadow: #519548 0px 1px 1px; text-decoration: none; color: #fff; padding: 8px 17px; margin: 5px; background: url('/images/button-bg.png') repeat-x #88C425; border: 1px solid #BEF202; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
-p a.button a:hover { background: url('/images/button-bg-hover.png') repeat-x #BEF202; }
+p a.button:hover { background: url('/images/button-bg-hover.png') repeat-x #BEF202; }
 p { color: #fff; }
 p i { color: #000; text-decoration: underline; padding-left: 35px; }
 

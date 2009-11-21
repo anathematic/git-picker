@@ -18,7 +18,12 @@ describe Log do
     @log.save
     @log.unzip
     File.exists?("#{RAILS_ROOT}/tmp/#{@log.id}").should be_true
-    # Test the contents of the file here
+  end
+  
+  it "should be able to read branches and import all the commits based on branches" do
+    @log.save
+    @log.read_branches
+    @log.branches.size.should eql(3)
   end
   
   it "should be able to open a .git and create the logs" do
