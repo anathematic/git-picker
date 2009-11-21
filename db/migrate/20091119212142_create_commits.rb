@@ -1,7 +1,7 @@
 class CreateCommits < ActiveRecord::Migration
   def self.up
     create_table :commits do |t|
-      t.integer :git_id
+      t.integer :git_id, :branch_id
       t.string :authored_by
       t.datetime :commited_at
       t.string :message
