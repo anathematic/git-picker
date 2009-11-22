@@ -5,7 +5,8 @@ describe Branch do
     @git = Git.make
     @valid_attributes = {
       :name => "Master",
-      :git_id => @git.id
+      :git_id => @git.id,
+      :repo_commits => []
     }
   end
 

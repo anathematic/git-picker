@@ -22,13 +22,9 @@ describe Git do
   
   it "should be able to read branches and import all the commits based on branches" do
     @git.save
-    @git.read_branches
     @git.branches.size.should eql(3)
-  end
-  
-  it "should be able to open a .git and create the logs" do
-    @git.save
-    @git.commits.size.should eql(3)
+    @git.commits.size.should eql(9)
+    @git.branches.first.commits.size.should eql(3)
   end
 
 end

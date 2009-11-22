@@ -53,4 +53,5 @@ Spec::Runner.configure do |config|
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
 end
 
-require File.dirname(__FILE__) + '/blueprints'
+require "#{RAILS_ROOT}/spec/blueprints"
+#require File.dirname(__FILE__) + '/blueprints'
