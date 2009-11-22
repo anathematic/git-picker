@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20091121013556) do
     t.integer  "branch_id"
     t.string   "authored_by"
     t.datetime "commited_at"
-    t.string   "message"
+    t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

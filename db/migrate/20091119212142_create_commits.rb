@@ -4,7 +4,7 @@ class CreateCommits < ActiveRecord::Migration
       t.integer :git_id, :branch_id
       t.string :authored_by
       t.datetime :commited_at
-      t.string :message
+      t.text :message
       t.timestamps
     end
   end
