@@ -1,3 +1,4 @@
+<h2><%= link_to @git.name, git_path(@git) %></h2>
 <% if flash[:notice] %><h2><%= flash[:notice] %></h2><% end %>
 <div class="child">Logged <%= @git.commits.count %> commits</div>
 <br style="clear: both;" />

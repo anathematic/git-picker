@@ -1,3 +1,3 @@
-<div><%= @commit.message %></div>
+<h2>Showing commit from <% if @branch %><%= link_to @branch.name, git_branch_path(@git, @branch) %> (from <%= link_to @git.name, git_path(@git) %>)<% else %><%= link_to @git.name, git_path(@git) %><% end %><div><%= @commit.message %></div>
 <div>By <%= @commit.committed_by %></div>
 <div><%= @commit.commited_at %></div>
