@@ -1,5 +1,5 @@
 <h2>Commits for <% if @branch %><%= link_to @branch.name, git_branch_path(@git, @branch) %> (branch)<% else %><%= link_to @git.name, git_path(@git) %> (all branches)<% end %></h2>
 
 <%= render(:partial => "commit", :collection => @commits) %>
-<div class="child"><%= @commits.size %> Commits</div><br />
+<div class="child"><%= @commits_count %> Commits <% if @commits_count > 10 %>(<i>Paginating of course)</i><% end %></div><br />
 <p><% if @branch %><%= link_to "Export to CSV", git_branch_commits_path(@git, @branch, :format => "csv"), :class => "button" %><% else %><%= link_to "Export to CSV", git_commits_path(@git, :format => :csv), :class => "button" %><% end %></p>

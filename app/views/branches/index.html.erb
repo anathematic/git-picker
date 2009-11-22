@@ -1,3 +1,4 @@
 <h2>Branches for <%= link_to @git.name, git_path(@git) %></h2>
-
 <%= render(:partial => "branch", :collection => @branches) %>
+<div class="child"><%= @branches_count %> Branches</div><br />
+<p><%= link_to "Export to CSV", git_branches_path(@git, :format => "csv"), :class => "button" %> <% if @branches_count > 10 %><i>(paginating of course)</i><% end %></p>

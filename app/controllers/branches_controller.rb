@@ -5,6 +5,7 @@ class BranchesController < ApplicationController
   
   def index
     @branches = @git.branches.paginate(:page => params[:page])
+    @branches_count = @git.branches.count
   end
   
   private
