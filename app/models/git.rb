@@ -10,7 +10,12 @@ class Git < ActiveRecord::Base
 
   validates_attachment_presence :attachment, :message => "You must add a file to upload"
   
+  before_save :assign_name
   after_save :load_branches
+  
+  def assign_name
+    self.name = "something" unless name
+  end
   
   def hashed_id
     Digest::SHA1.hexdigest(self.id)

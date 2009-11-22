@@ -1,3 +1,3 @@
-<h1>Branches for <%= @git.name %></h1>
+<h2>Branches for <%= link_to @git.name, git_path(@git) %></h2>
 
 <%= render(:partial => "branch", :collection => @branches) %>

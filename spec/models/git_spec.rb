@@ -32,5 +32,15 @@ describe Git do
     @git.save
     @git.should be_valid
   end
-
+  
+  it "should grab the name of the git repo if :name is not defined" do
+    @git.name = nil
+    @git.save
+    @git.name.should eql("something")
+  end
+  
+  it "should remove the git repo out of temp and /gits/ once it's loaded into the db'" do
+    @git.save
+    
+  end
 end
