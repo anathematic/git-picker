@@ -1,0 +1,3 @@
+date, author, message
+<% for commit in @commits %><%= commit.commited_at %>, <%= commit.authored_by %>, <%= commit.message %>
+<% end %>
