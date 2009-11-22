@@ -1,7 +1,5 @@
-<div class="white">
-  <% if flash[:notice] %><p class="flash_notice"><%= flash[:notice] %></p><% end %>
-  Logged <%= @git.commits.count %> commits
-</div>
+<% if flash[:notice] %><h2><%= flash[:notice] %></h2><% end %>
+<div class="child">Logged <%= @git.commits.count %> commits</div>
 <br style="clear: both;" />
 
 <p><%= link_to "Branches", git_branches_path(@git), :class => "button" %> (<%= @git.branches.size %>)</p><br />

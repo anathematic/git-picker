@@ -21,7 +21,7 @@ hr { border: none; border-top: 1px solid #ddd; }
 
 div.wrapper { width: 700px; text-align: left; position: relative; top: 50px; left: 50px; }
 div.wrapper p { line-height: 30px; }
-div.wrapper p span { background: #004273; padding: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+div.wrapper p span { background: #004273; padding: 3px 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
 div.wrapper div.white { background: #fff; margin-top: 10px; padding: 3px; }
 div.wrapper div.credits { text-align: right; margin-top: 10px; padding-top: 5px; border-top: solid 1px #08172B; width: 100%; font-size: 90%; }
 div.child { margin-top: 10px; list-style: none; background: #08172B; padding: 3px 10px 3px; color: #fff; }
