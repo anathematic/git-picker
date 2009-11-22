@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :gits
+  map.resources :gits do |git|
+    git.resources :branches
+  end
 
   map.root :controller => "gits"
 
