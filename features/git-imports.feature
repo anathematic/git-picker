@@ -15,7 +15,7 @@ Feature: Git Import
   Scenario: I should be able to sort out my csv details based on the git uploaded
     Given I have an existing git repo
     When I follow "Branches"
-    Then I should see "Master"
+    Then I follow "master"
     When I follow "Commits"
     Then I should see "3 Commits"
     

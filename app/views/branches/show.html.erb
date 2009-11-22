@@ -1,0 +1,2 @@
+<div><%= @branch.name %></div>
+<p><%= link_to "Commits", git_branch_commits_path(@git, @branch) %> (<%= @branch.commits.size %>)</p>

@@ -11,7 +11,11 @@ class ApplicationController < ActionController::Base
   private
   
   def git
-    @git = Git.find(params[:id])
+    @git = Git.find(params[:git_id])
+  end
+  
+  def branch
+    @branch = Branch.find(params[:branch_id])
   end
   
 end

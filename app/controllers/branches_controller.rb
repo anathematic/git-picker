@@ -1,6 +1,7 @@
 class BranchesController < ApplicationController
 
   before_filter :git
+  before_filter :branch, :only => "show"
   
   def index
     @branches = @git.branches
