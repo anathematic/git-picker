@@ -1,4 +1,4 @@
-Feature: Log Import
+Feature: Git Import
   In order to make my git commits useful
   As a user
   I want be able to upload my file, adjust the settings and go from there
@@ -19,4 +19,3 @@ Feature: Log Import
     When I follow "Commits"
     Then I should see "3 Commits"
     
-  
