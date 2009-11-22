@@ -14,7 +14,7 @@ class Git < ActiveRecord::Base
   after_save :load_branches
   
   def assign_name
-    self.name = "something" unless name
+    self.name = "Git Repo" unless name
   end
   
   def hashed_id
