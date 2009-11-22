@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resources :gits do |git|
-    git.resources :branches
+    git.resources :branches do |commit|
+      commit.resources :commits
+    end
   end
 
   map.root :controller => "gits"
