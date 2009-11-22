@@ -23,7 +23,7 @@ div.wrapper { width: 700px; text-align: left; position: relative; top: 50px; lef
 div.wrapper p { line-height: 30px; }
 div.wrapper p span { background: #004273; padding: 3px 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
 div.wrapper div.white { background: #fff; margin-top: 10px; padding: 3px; }
-div.wrapper div.credits { text-align: right; margin-top: 10px; padding-top: 5px; border-top: solid 1px #08172B; width: 100%; font-size: 90%; }
+div.wrapper div.credits { text-align: right; margin-top: 10px; padding-top: 5px; border-top: solid 1px #08172B; width: 100%; font-size: 90%; color: #fff; }
 div.child { margin-top: 10px; list-style: none; background: #08172B; padding: 3px 10px 3px; color: #fff; }
 
 p a.button, p a.button:visited { font-weight: bold; text-shadow: #519548 0px 1px 1px; text-decoration: none; color: #fff; padding: 8px 17px; margin: 5px; background: url('/images/button-bg.png') repeat-x #88C425; border: 1px solid #BEF202; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
