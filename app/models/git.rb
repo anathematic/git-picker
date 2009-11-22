@@ -1,6 +1,8 @@
 class Git < ActiveRecord::Base
 
   include Grit
+  xss_terminate
+
   has_many :commits, :class_name => "::Commit", :through => :branches
   has_many :branches, :class_name => "::Branch"
   

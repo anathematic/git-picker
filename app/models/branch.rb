@@ -1,5 +1,7 @@
 class Branch < ActiveRecord::Base
   
+  xss_terminate
+  
   belongs_to :git
   has_many :commits, :class_name => "::Commit"
   
