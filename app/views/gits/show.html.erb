@@ -1,9 +1,8 @@
 <div class="white">
-  <p><%= flash[:notice] %></p>
+  <% if flash[:notice] %><p class="flash_notice"><%= flash[:notice] %></p><% end %>
   Logged <%= @git.commits.count %> commits
 </div>
 <br style="clear: both;" />
-<p><%= link_to "Download CSV", git_path(:format => "csv"), :class => "button" %> or <%= link_to "New Git", new_git_path, :class => "button" %></p>
 
-<div><%= link_to "Branches", git_branches_path(@git) %> (<%= @git.branches.size %>)</div>
-<div>Commits (<%= @git.commits.size %>)</div>
+<p><%= link_to "Branches", git_branches_path(@git), :class => "button" %> (<%= @git.branches.size %>)</p><br />
+<p><%= link_to "Commits", git_commits_path(@git), :class => "button" %> (<%= @git.commits.size %>)</p>

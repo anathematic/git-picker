@@ -3,3 +3,5 @@
 <%= render(:partial => "commit", :collection => @commits) %>
 
 <div><%= @commits.size %> Commits</div>
+
+<p><% if @branch %><%= link_to "Export to CSV", git_branch_commits_path(@git, @branch, :format => "csv"), :class => "button" %><% else %><%= link_to "Export to CSV", git_commits_path(@git, :format => :csv) %><% end %></p>
