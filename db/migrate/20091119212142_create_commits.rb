@@ -5,6 +5,7 @@ class CreateCommits < ActiveRecord::Migration
       t.string :authored_by
       t.datetime :commited_at
       t.text :message
+      t.string :permalink
       t.timestamps
     end
   end

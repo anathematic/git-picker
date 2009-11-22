@@ -3,7 +3,7 @@ class CreateBranches < ActiveRecord::Migration
     create_table :branches do |t|
       t.string :name
       t.integer :git_id
-
+      t.string :permalink
       t.timestamps
     end
   end

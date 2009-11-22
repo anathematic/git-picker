@@ -9,7 +9,11 @@ class CommitsController < ApplicationController
     respond_to do |format|
       format.html { }
       format.csv {
-        @commits = @branch.commits.all
+        if params[:branch_id]
+          @commits = @branch.commits.all
+        else
+          @commits = @git.commits.all
+        end
       }
     end
   end

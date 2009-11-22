@@ -19,7 +19,7 @@ class Git < ActiveRecord::Base
   has_permalink :name, :update => true
   
   def to_param
-    id.to_s + "-" + self.permalink
+    id.to_s + "-" + permalink
   end
   
   def assign_name

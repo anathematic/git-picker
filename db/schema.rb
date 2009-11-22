@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(:version => 20091121013556) do
   create_table "branches", :force => true do |t|
     t.string   "name"
     t.integer  "git_id"
+    t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20091121013556) do
     t.string   "authored_by"
     t.datetime "commited_at"
     t.text     "message"
+    t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20091121013556) do
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
+    t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

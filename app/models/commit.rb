@@ -11,14 +11,14 @@ class Commit < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 10
   
-  has_permalink :name, :update => true
+  has_permalink :message, :update => true
   
   def to_param
-    id.to_s + "-" + self.permalink
+    id.to_s + "-" + permalink
   end
   
   def before_save
-    self.message = "No message found for this commit"
+    self.message = "No message found for this commit" unless message
   end
   
 end
