@@ -43,4 +43,10 @@ describe Git do
     @git.save    
     FAIL
   end
+  
+  it "should prevent false tar files from being uploaded" do
+    @git.attachment = File.open("#{RAILS_ROOT}/spec/fixtures/branches.yml")
+    @git.save
+    @git.should have(1).error_on(:attachment)
+  end
 end

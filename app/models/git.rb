@@ -11,6 +11,7 @@ class Git < ActiveRecord::Base
                     :url => "/gits/:basename.:extension"
 
   validates_attachment_presence :attachment, :message => "You must add a file to upload"
+  # validates_attachment_content_type :attachment, :content_type => ["application/x-compressed", "application/x-gzip", "application/x-tar-gz"], :message => "Tar files only please"
   
   before_save :assign_name
   after_save :load_branches
