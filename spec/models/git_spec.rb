@@ -26,5 +26,11 @@ describe Git do
     @git.commits.size.should eql(9)
     @git.branches.first.commits.size.should eql(3)
   end
+  
+  it "should be able to handle big git repos" do
+    @git.attachment = File.open("#{RAILS_ROOT}/spec/fixtures/thiswayin-git.tar.gz")
+    @git.save
+    @git.should be_valid
+  end
 
 end

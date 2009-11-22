@@ -28,7 +28,7 @@ class Git < ActiveRecord::Base
   
   def load_branches
     git_repo.branches.each do |branch|
-      branch_commits = git_repo.commits(branch.name, 9999)
+      branch_commits = git_repo.commits(branch.name, 800)
       branch_commits ||= []
       branches.create!(:name => branch.name, :repo_commits => branch_commits)
     end

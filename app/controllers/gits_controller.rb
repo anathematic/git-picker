@@ -1,5 +1,9 @@
 class GitsController < ApplicationController
 
+  before_filter :git, :only => "show"
+  before_filter :branch, :only => "show"
+  before_filter :commits, :only => "show"
+  
   def index
     redirect_to new_git_path
   end
@@ -20,12 +24,16 @@ class GitsController < ApplicationController
   end
   
   def show
-    @git = Git.find(params[:id])
-    
     respond_to do |format|
       format.html { }
       format.csv { }
     end
+  end
+
+  private
+  
+  def git
+    @git = Git.find(params[:id])
   end
   
 end

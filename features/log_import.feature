@@ -5,7 +5,7 @@ Feature: Log Import
   
   Scenario: I can upload my file and download it as a csv
     Given I am on the homepage
-    When I attach the file at "spec/fixtures/git-example.tar.gz" to "Attachment"
+    When I attach the file at "spec/fixtures/thiswayin-git.tar.gz" to "Attachment"
     And I press "Upload"
     Then I should see "Successfully Uploaded File"
     When I follow "Download CSV"
