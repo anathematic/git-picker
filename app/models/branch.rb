@@ -7,13 +7,18 @@ class Branch < ActiveRecord::Base
   
   validates_presence_of :name
   validates_presence_of :git_id
-#  validates_presence_of :repo_commits
   
   attr_accessor :repo_commits
   after_save :load_commits
  
   cattr_reader :per_page
   @@per_page = 10
+  
+  has_permalink :name, :update => true
+  
+  def to_param
+    id.to_s + "-" + self.permalink
+  end
    
   def load_commits
     repo_commits.each do |commit|

@@ -18,9 +18,9 @@ class CommitsController < ApplicationController
   
   def commit
     if params[:branch_id]
-      @commit = @branch.commits.find(params[:id])
+      @commit = @branch.commits.find(params[:id].to_i)
     else
-      @commit = @git.commits.find(params[:id])
+      @commit = @git.commits.find(params[:id].to_i)
     end
   end
   

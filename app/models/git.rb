@@ -16,6 +16,12 @@ class Git < ActiveRecord::Base
   before_save :assign_name
   after_save :load_branches
   
+  has_permalink :name, :update => true
+  
+  def to_param
+    id.to_s + "-" + self.permalink
+  end
+  
   def assign_name
     self.name = "Git Repo" unless name
   end

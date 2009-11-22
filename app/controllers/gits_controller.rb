@@ -31,7 +31,7 @@ class GitsController < ApplicationController
   private
   
   def git
-    @git = Git.find(params[:id])
+    @git = Git.find(params[:id].to_i)
   end
   
 end

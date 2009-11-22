@@ -11,7 +11,7 @@ class BranchesController < ApplicationController
   private
   
   def branch
-    @branch = Branch.find(params[:id])
+    @branch = Branch.find(params[:id].to_i)
   end
   
 end
