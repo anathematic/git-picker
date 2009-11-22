@@ -6,9 +6,9 @@ class CommitsController < ApplicationController
   
   def index
     if params[:branch_id]
-      @commits = @branch.commits
+      @commits = @branch.commits.paginate(:page => params[:page])
     else
-      @commits = @git.commits
+      @commits = @git.commits.paginate(:page => params[:page])
     end
   end
   

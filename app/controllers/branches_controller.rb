@@ -4,7 +4,7 @@ class BranchesController < ApplicationController
   before_filter :branch, :only => "show"
   
   def index
-    @branches = @git.branches
+    @branches = @git.branches.paginate(:page => params[:page])
   end
   
   private

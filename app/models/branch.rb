@@ -9,7 +9,10 @@ class Branch < ActiveRecord::Base
   
   attr_accessor :repo_commits
   after_save :load_commits
-  
+ 
+  cattr_reader :per_page
+  @@per_page = 10
+   
   def load_commits
     repo_commits.each do |commit|
       commits.create!(:message => commit.message, :authored_by => commit.author.to_s, :commited_at => commit.date)
