@@ -32,8 +32,8 @@ To run through the tests there's a combination of:
   
 ## Wishlist
 There's a few things this is really missing, here's what's in my head for later on:
-- Live URL reading, none of this needing to zip up git repos stuff
-- Better interface, bloops I should really get around to do
-- Better exports based on dates / branches / different formats
+    1. Live URL reading, none of this needing to zip up git repos stuff
+    2. Better interface, bloops I should really get around to do
+    3. Better exports based on dates / branches / different formats
 
 That's it, any bugs you can find me as @anathematic on twitter or contact via github.
